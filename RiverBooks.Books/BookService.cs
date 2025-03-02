@@ -21,7 +21,7 @@ internal class BookService : IBookService
   {
     var bookToDelete = await _bookRepository.GetByIdAsync(id);
     if (bookToDelete != null) {
-      await _bookRepository.DeleteAsync(id);
+      await _bookRepository.DeleteAsync(bookToDelete);
       await _bookRepository.SaveChangesAsync();
     }
   }
