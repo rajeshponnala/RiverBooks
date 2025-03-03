@@ -2,43 +2,38 @@
 
 namespace RiverBooks.Books;
 
-internal class EfBookRepository : IBookRepository
+internal class EfBookRepository(BookDbContext dbContext) : IBookRepository
 {
-  private readonly BookDbContext _dbContext;
-  public EfBookRepository(BookDbContext dbContext)
-  {
-    _dbContext = dbContext;
-  }
   public Task AddAsync(Book book)
   {
     
-    _dbContext.Books.Add(book);
+    dbContext.Books.Add(book);
     
     return Task.CompletedTask;
   }
   public Task DeleteAsync(Book book)
   {
-    _dbContext.Books.Remove(book);
+    dbContext.Books.Remove(book);
     return Task.CompletedTask;
   }
   public async Task<Book?> GetByIdAsync(Guid id)
   {
-    return await _dbContext!.Books.FindAsync(id);
+    return await dbContext!.Books.FindAsync(id);
   }
 
   public async Task<List<Book>> ListAsync()
   {
-     return await _dbContext.Books.ToListAsync();
+     return await dbContext.Books.ToListAsync();
   }
 
   public async Task SaveChangesAsync()
   {
-    await _dbContext.SaveChangesAsync();
+    await dbContext.SaveChangesAsync();
   }
 
   public Task UpdateAsync(Book book)
   {
-    _dbContext.Books.Update(book);
+    dbContext.Books.Update(book);
     return Task.CompletedTask;
   }
 }
