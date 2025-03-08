@@ -9,7 +9,7 @@ internal class CreateBookRequest
   public string Author { get; set; } = string.Empty;
   public decimal Price { get; set; }
 }
-internal class CreateBookEndPoint(IBookService bookService) : Endpoint<CreateBookRequest, BookDto>
+internal class Create(IBookService bookService) : Endpoint<CreateBookRequest, BookDto>
 {
   public override void Configure()
   {
@@ -24,7 +24,7 @@ internal class CreateBookEndPoint(IBookService bookService) : Endpoint<CreateBoo
       req.Author,
       req.Price);
     await bookService.CreateBookAsync(book);
-    await SendCreatedAtAsync<GetBookByIdEndPoint>(
+    await SendCreatedAtAsync<GetBookById>(
       new { book.Id },
       book,
       cancellation: ct);

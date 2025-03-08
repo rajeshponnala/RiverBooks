@@ -8,7 +8,7 @@ public class ListBooksResponse
   public IEnumerable<BookDto> Books { get; set; } = [];
 }
 
-internal class ListBooksEndpoint(IBookService bookService) : EndpointWithoutRequest<ListBooksResponse>
+internal class List(IBookService bookService) : EndpointWithoutRequest<ListBooksResponse>
 {
 
   private readonly IBookService _bookService = bookService;

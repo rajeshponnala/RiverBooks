@@ -3,7 +3,7 @@
 namespace RiverBooks.Books.BookEndPoints;
 
 public record UpdateBookPriceRequest(Guid Id, decimal NewPrice);
-internal class UpdateBookPriceEndPoint(IBookService bookService) : Endpoint<UpdateBookPriceRequest, BookDto>
+internal class UpdatePrice(IBookService bookService) : Endpoint<UpdateBookPriceRequest, BookDto>
 {
   public override void Configure()
   {

@@ -3,7 +3,7 @@
 namespace RiverBooks.Books.BookEndPoints;
 
 public record GetBookByIdRequest(Guid Id);
-internal class GetBookByIdEndPoint(IBookService bookService) : Endpoint<GetBookByIdRequest, BookDto>
+internal class GetBookById(IBookService bookService) : Endpoint<GetBookByIdRequest, BookDto>
 {
   public override void Configure()
   {

@@ -3,7 +3,7 @@
 namespace RiverBooks.Books.BookEndPoints;
 
 public record DeleteBookRequest(Guid Id);
-internal class DeleteBookEndPoint(IBookService bookService) : Endpoint<DeleteBookRequest>
+internal class Delete(IBookService bookService) : Endpoint<DeleteBookRequest>
 {
   public override void Configure()
   {
