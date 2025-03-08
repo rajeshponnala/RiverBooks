@@ -1,8 +1,24 @@
 ﻿using FastEndpoints;
+using FluentValidation;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace RiverBooks.Books.BookEndPoints;
 
 public record UpdateBookPriceRequest(Guid Id, decimal NewPrice);
+
+public class UpdateBookPriceValidator : Validator<UpdateBookPriceRequest>
+{
+  public UpdateBookPriceValidator()
+  {
+    RuleFor(x => x.Id)
+      .NotNull()
+      .NotEqual(Guid.Empty)
+      .WithMessage("A book id is required");
+    RuleFor(x => x.NewPrice)
+      .GreaterThanOrEqualTo(0)
+      .WithMessage("Book prices may not be negative.");
+  }
+}
 internal class UpdatePrice(IBookService bookService) : Endpoint<UpdateBookPriceRequest, BookDto>
 {
   public override void Configure()
