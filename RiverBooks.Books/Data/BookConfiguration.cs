@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace RiverBooks.Books.Data;
-internal class BookConfiguration : IEntityTypeConfiguration<Book>
+namespace RiverBooks.Books;
+internal class BookConfiguration: IEntityTypeConfiguration<Book>
 {
   internal static readonly Guid Book1Guid = new Guid("A89F6CD7-4693-457B-9009-02205DBBFE45");
   internal static readonly Guid Book2Guid = new Guid("E4FA19BF-6981-4E50-A542-7C9B26E9EC31");
