@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace RiverBooks.Books;
+namespace RiverBooks.Books.Data;
 
 internal class EfBookRepository(BookDbContext dbContext) : IBookRepository
 {
   public Task AddAsync(Book book)
   {
-    
+
     dbContext.Books.Add(book);
-    
+
     return Task.CompletedTask;
   }
   public Task DeleteAsync(Book book)
@@ -23,7 +23,7 @@ internal class EfBookRepository(BookDbContext dbContext) : IBookRepository
 
   public async Task<List<Book>> ListAsync()
   {
-     return await dbContext.Books.ToListAsync();
+    return await dbContext.Books.ToListAsync();
   }
 
   public async Task SaveChangesAsync()

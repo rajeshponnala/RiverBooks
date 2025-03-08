@@ -1,13 +1,9 @@
 ﻿using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 
-namespace RiverBooks.Books;
-public class BookDbContext : DbContext
+namespace RiverBooks.Books.Data;
+internal class BookDbContext(DbContextOptions options) : DbContext(options)
 {
-  public BookDbContext(DbContextOptions options) : base(options)
-  {
-  }
-
   internal DbSet<Book> Books { get; set; }
   protected override void OnModelCreating(ModelBuilder modelBuilder)
   {
@@ -17,7 +13,7 @@ public class BookDbContext : DbContext
 
   protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
   {
-    configurationBuilder.Properties<decimal>().HavePrecision(18,6);
+    configurationBuilder.Properties<decimal>().HavePrecision(18, 6);
   }
 
 }
