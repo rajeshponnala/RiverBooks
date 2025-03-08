@@ -25,3 +25,5 @@ app.UseHttpsRedirection();
 app.UseFastEndpoints();
 
 app.Run();
+
+public partial class Program { }

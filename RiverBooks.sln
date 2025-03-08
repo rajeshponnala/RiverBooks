@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorConfig = .editorConfig
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiverBooks.Books.Tests", "RiverBooks.Books.Tests\RiverBooks.Books.Tests.csproj", "{82623D67-38C5-4496-BC4C-93D62653C302}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{F9AD32F1-BE22-4D98-B9B6-384335F2344E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9AD32F1-BE22-4D98-B9B6-384335F2344E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9AD32F1-BE22-4D98-B9B6-384335F2344E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82623D67-38C5-4496-BC4C-93D62653C302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82623D67-38C5-4496-BC4C-93D62653C302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82623D67-38C5-4496-BC4C-93D62653C302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82623D67-38C5-4496-BC4C-93D62653C302}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
