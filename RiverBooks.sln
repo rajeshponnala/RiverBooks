@@ -14,6 +14,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiverBooks.Books.Tests", "RiverBooks.Books.Tests\RiverBooks.Books.Tests.csproj", "{82623D67-38C5-4496-BC4C-93D62653C302}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Books Module", "Books Module", "{7993B0CC-A02A-4B36-9698-DE373ED1EF32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users Module", "Users Module", "{BCC15093-5BD1-41C7-8086-352D1E67B602}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiverBooks.Users", "RiverBooks.Users\RiverBooks.Users.csproj", "{2DA9309E-937C-425E-A594-FF9D31515FF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,8 +38,17 @@ Global
 		{82623D67-38C5-4496-BC4C-93D62653C302}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82623D67-38C5-4496-BC4C-93D62653C302}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82623D67-38C5-4496-BC4C-93D62653C302}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DA9309E-937C-425E-A594-FF9D31515FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DA9309E-937C-425E-A594-FF9D31515FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DA9309E-937C-425E-A594-FF9D31515FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DA9309E-937C-425E-A594-FF9D31515FF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F9AD32F1-BE22-4D98-B9B6-384335F2344E} = {7993B0CC-A02A-4B36-9698-DE373ED1EF32}
+		{82623D67-38C5-4496-BC4C-93D62653C302} = {7993B0CC-A02A-4B36-9698-DE373ED1EF32}
+		{2DA9309E-937C-425E-A594-FF9D31515FF9} = {BCC15093-5BD1-41C7-8086-352D1E67B602}
 	EndGlobalSection
 EndGlobal
