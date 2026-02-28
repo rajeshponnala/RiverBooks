@@ -16,7 +16,7 @@ public static class UsersModuleExtensions
     {
       options.UseSqlServer(connectionString);
     });
-    services.AddIdentityCore<IdentityUser>(options => { })
+    services.AddIdentityCore<ApplicationUser>(options => { })
             .AddEntityFrameworkStores<UsersDbContext>();
     logger.Information("{Module} module services are registered", "Users"); 
     return services;
