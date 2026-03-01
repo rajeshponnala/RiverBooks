@@ -48,3 +48,21 @@ Content-Type: application/json
   "email": "steve@test.com",
   "password": "Pass@word1"
 }
+
+###
+@token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NzIzOTA5NDIsIkVtYWlsQWRkcmVzcyI6InN0ZXZlQHRlc3QuY29tIiwiZXhwIjoxNzcyMzk0NTQyLCJuYmYiOjE3NzIzOTA5NDJ9._1dXwH28H1XjIFzrB3zfCoqICtbO1BOzOKBgHFsDWG4
+
+###
+POST {{RiverBooks.Web_HostAddress}}/cart
+Accept: text/plain
+Authorization: Bearer {{token}}
+Content-Type: application/json
+{
+  "bookId": "c3d6babd-c2c8-4fe8-a979-03e5f74f8a06",
+  "quantity": 1
+}
+
+### 
+GET {{RiverBooks.Web_HostAddress}}/cart
+Accept: application/json
+Authorization: Bearer {{token}}

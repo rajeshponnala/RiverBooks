@@ -10,12 +10,14 @@ public static class BookExtensions
 {
     public static IServiceCollection AddBookServices(
       this IServiceCollection services,
-    ConfigurationManager config, ILogger logger)
+    ConfigurationManager config, ILogger logger, List<System.Reflection.Assembly> mediatRAssemblies)
     {
         string? connectionString = config.GetConnectionString("BooksConnectionString");
     services.AddDbContext<BookDbContext>(options => options.UseSqlServer(connectionString));
     services.AddScoped<IBookRepository, EfBookRepository>();
     services.AddScoped<IBookService, BookService>();
+
+    mediatRAssemblies.Add(typeof(BookExtensions).Assembly);
 
     logger.Information("{Module} module services registered", "Books");
 

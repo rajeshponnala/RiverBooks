@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace RiverBooks.Users;
 
@@ -25,5 +26,13 @@ public class UsersDbContext : IdentityDbContext<IdentityUser>
     configurationBuilder
        .Properties<decimal>()
        .HavePrecision(18,6);
+  }
+}
+
+public class CartItemConfiguration : IEntityTypeConfiguration<CartItem>
+{
+  public void Configure(EntityTypeBuilder<CartItem> builder)
+  {
+    builder.Property(item => item.Id).ValueGeneratedNever();
   }
 }
