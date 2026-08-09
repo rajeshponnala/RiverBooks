@@ -11,10 +11,11 @@ public class ApplicationUser : IdentityUser
 
   public void AddItemToCart(CartItem item) {
     Guard.Against.Null(item); 
-    var existingBook = _cartItems.FirstOrDefault(citem => citem.Id == item.Id);
+    var existingBook = _cartItems.FirstOrDefault(citem => citem.BookId == item.BookId);
     if (existingBook != null) {
       existingBook.updateQuantity(existingBook.Quantity + item.Quantity);
-      // TODO: what if other details have been changed
+      existingBook.updateDescription(item.Description);
+      existingBook.updateUnitPrice(item.UnitPrice);
       return;
     }
     _cartItems.Add(item);
@@ -27,7 +28,7 @@ public class CartItem {
        BookId = Guard.Against.Default(bookId);
        Description = Guard.Against.NullOrEmpty(description);
        Quantity = Guard.Against.Negative(quantity);
-
+    UnitPrice = Guard.Against.Negative(unitPrice);
   }
 
   public Guid Id { get; set; } = Guid.NewGuid();
@@ -38,5 +39,15 @@ public class CartItem {
 
   public void updateQuantity(int quantity) { 
      this.Quantity = Guard.Against.Negative(quantity);
-  }  
+  }
+
+  internal void updateDescription(string description)
+  {
+    this.Description = Guard.Against.Null(description);
+  }
+
+  internal void updateUnitPrice(decimal unitPrice)
+  {
+    this.UnitPrice = Guard.Against.Negative(unitPrice);
+  }
 }

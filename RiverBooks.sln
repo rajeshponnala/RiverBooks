@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 18
+VisualStudioVersion = 18.8.12023.21 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiverBooks.Web", "RiverBooks.Web\RiverBooks.Web.csproj", "{1EA52283-2AED-4797-A426-59A49ABACDA4}"
 EndProject
@@ -19,6 +19,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users Module", "Users Module", "{BCC15093-5BD1-41C7-8086-352D1E67B602}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiverBooks.Users", "RiverBooks.Users\RiverBooks.Users.csproj", "{2DA9309E-937C-425E-A594-FF9D31515FF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiverBooks.Books.Contracts", "RiverBooks.Books.Contracts\RiverBooks.Books.Contracts.csproj", "{E5BD126B-BD25-478A-9C8B-18400273AAC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +44,10 @@ Global
 		{2DA9309E-937C-425E-A594-FF9D31515FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DA9309E-937C-425E-A594-FF9D31515FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DA9309E-937C-425E-A594-FF9D31515FF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5BD126B-BD25-478A-9C8B-18400273AAC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5BD126B-BD25-478A-9C8B-18400273AAC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5BD126B-BD25-478A-9C8B-18400273AAC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5BD126B-BD25-478A-9C8B-18400273AAC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +56,6 @@ Global
 		{F9AD32F1-BE22-4D98-B9B6-384335F2344E} = {7993B0CC-A02A-4B36-9698-DE373ED1EF32}
 		{82623D67-38C5-4496-BC4C-93D62653C302} = {7993B0CC-A02A-4B36-9698-DE373ED1EF32}
 		{2DA9309E-937C-425E-A594-FF9D31515FF9} = {BCC15093-5BD1-41C7-8086-352D1E67B602}
+		{E5BD126B-BD25-478A-9C8B-18400273AAC9} = {7993B0CC-A02A-4B36-9698-DE373ED1EF32}
 	EndGlobalSection
 EndGlobal
